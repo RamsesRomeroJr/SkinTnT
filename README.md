@@ -1,2 +1,4 @@
 # SkinTnT
-AirBnB clone for tattoo artist/shops to post locations, and availability while clients/users can schedule and leave reviews
+
+### Introduction
+SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=NEARBY&search_type=HOMEPAGE_BANNER)
