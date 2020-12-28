@@ -17,19 +17,9 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#live-link">Live Link</a></li>
+    <li><a href="#contact">Contributing</a></li>
   </ol>
 </details>
 
@@ -46,6 +36,22 @@ SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=N
 
 ---
 
+### Features
+* Register
+  * Available on the nav bar
+  
+* Login
+  * A function integrated into our homepage that allows the user to login through our login modal, to not disrupt their current experience
+  
+ * Bookings
+  * Users can book a session with at their favorite tattoo shops
+  
+* Spot Search
+  * Users can search for tattoo shops by location or name
+  
+* Reviews
+  * After a users session they can leave a rating and a review of their experience
+
 ---
 
 ### Live Link 
@@ -54,5 +60,7 @@ SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=N
 ---
 
 
-### Features
-*
+### Contact
+- Ramses Romero - ramses.romero.jr@gmail.com
+- [linkedIn]()
+- [Project Link]()
