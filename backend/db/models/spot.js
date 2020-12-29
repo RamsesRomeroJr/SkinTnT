@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     zipcode: DataTypes.INTEGER
   }, {});
   Spot.associate = function(models) {
-    // associations can be defined here
+    Spot.hasMany(models.Opening, {foreignKey:'spotId'})
   };
   return Spot;
 };

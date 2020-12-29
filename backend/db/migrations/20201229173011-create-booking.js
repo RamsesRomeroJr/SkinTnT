@@ -1,40 +1,32 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Spots', {
+    return queryInterface.createTable('Bookings', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      userId: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        references: {model: 'Users'}
       },
-      longitude: {
+      openingId: {
         allowNull: false,
-        type: Sequelize.DECIMAL
+        type: Sequelize.INTEGER,
+        references: {model: 'Openings'}
       },
-      latitude: {
-        allowNull: false,
-        type: Sequelize.DECIMAL
+      active: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
-      street: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      city: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      state: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      zipcode: {
-        allowNull: false,
+      rating: {
         type: Sequelize.INTEGER
+      },
+      review: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -47,6 +39,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Spots');
+    return queryInterface.dropTable('Bookings');
   }
 };
