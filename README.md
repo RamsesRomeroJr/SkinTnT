@@ -39,7 +39,7 @@ SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=N
 * [Sequelize](https://sequelize.org/)
 
 ### Database Schema
-![database](./database-schema.png)
+![database](./database.png)
 
 ---
 
