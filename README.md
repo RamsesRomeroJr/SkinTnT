@@ -18,6 +18,9 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
+      <ul>
+        <li><a href="#database-schema">Database Schema</a></li>
+      </ul>
     </li>
     <li><a href="#features">Features</a></li>
     <li><a href="#live-link">Live Link</a></li>
@@ -34,6 +37,9 @@ SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=N
 * [Redux](https://react-redux.js.org/)
 * [Express](https://expressjs.com/)
 * [Sequelize](https://sequelize.org/)
+
+### Database Schema
+![database](./database-schema.png)
 
 ---
 
