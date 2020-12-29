@@ -24,7 +24,7 @@
     </li>
     <li><a href="#features">Features</a></li>
     <li><a href="#live-link">Live Link</a></li>
-    <li><a href="#contact">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
