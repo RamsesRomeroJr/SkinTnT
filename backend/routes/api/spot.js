@@ -25,7 +25,7 @@ router.get('/:spotId', asyncHandler(async (req, res) =>{
     res.json({spot: spot})
 }));
 
-router.post('/review',requireAuth, asyncHandler(async (req,res) => {
+router.post('/rating',requireAuth, asyncHandler(async (req,res) => {
     const {userId,
            spotId,
            review,

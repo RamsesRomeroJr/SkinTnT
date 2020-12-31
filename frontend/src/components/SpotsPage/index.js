@@ -1,5 +1,6 @@
 import {fetch} from "../../store/csrf"
 import {useEffect, useState} from "react"
+import {NavLink} from "react-router-dom"
 
 
 import {useDispatch, useSelector} from "react-redux"
@@ -8,7 +9,7 @@ import {fetchAllSpots} from "../../store/spots"
 const Spot = ({theSpot}) => {
     return (
         <div>
-            <h3>{theSpot.name}</h3>
+            <NavLink to={`/spot/${theSpot.id}`}>{theSpot.name}</NavLink>
         </div>
     )
 };
