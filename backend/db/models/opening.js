@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Opening.associate = function(models) {
     Opening.belongsTo(models.Spot, {foreignKey: 'spotId'});
-    Opening.hasOne(models.Booking, {foreignKey: 'openingId'})
+    Opening.belongsTo(models.User, {foreignKey: 'userId'});
   };
   return Opening;
 };

@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Spot.associate = function(models) {
     Spot.hasMany(models.Opening, {foreignKey:'spotId'})
+    Spot.hasMany(models.Rating, {foreignKey:'spotId'})
   };
   return Spot;
 };
