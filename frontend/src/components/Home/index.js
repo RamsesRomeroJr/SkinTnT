@@ -1,5 +1,6 @@
 import "./index.css"
 import splash from "./TattooNeon.jpg"
+import {Link} from "react-router-dom"
 
 
 const Home = () =>{
@@ -12,9 +13,9 @@ const Home = () =>{
                 <h1>
                     Find Your
                 </h1>
-                <h1>
+                <Link to ="/spots">
                     Spot
-                </h1>
+                </Link>
                 </div>
             </div>
         </div>
