@@ -3,18 +3,24 @@ const router = express.Router();
 const asyncHandler = require('express-async-handler');
 const {requireAuth} = require('../../utils/auth')
 
-const {Spot, Opening, Booking} = require('../../db/models');
+const {Spot, Opening, Rating} = require('../../db/models');
 
 router.get('/:spotId', asyncHandler(async (req, res) =>{
     const spotId = parseInt(req.params.spotId, 10);
 
     const spot = await Spot.findByPk(spotId, {
-        include:
+        include:[
             {
                 model: Opening,
 
+            },
+            {
+                model: Rating,
             }
+        ]
     });
+
+
 
     res.json({spot: spot})
 }));
