@@ -1,6 +1,10 @@
 import {fetch} from "../../store/csrf"
 import {useEffect, useState} from "react"
 
+
+import {useDispatch, useSelector} from "react-redux"
+import {fetchAllSpots} from "../../store/spots"
+
 const Spot = ({theSpot}) => {
     return (
         <div>
@@ -11,11 +15,14 @@ const Spot = ({theSpot}) => {
 
 const SpotsPage = () =>{
 
-    const [currentSpots, setSpots] = useState([]);
+    const dispatch = useDispatch();
+    const currentSpots = useSelector(state => {
+        return state.spots;
+    })
 
     useEffect(async() => {
-        const res = await fetch("/api/spots")
-        setSpots(res.data.spots);
+        dispatch(fetchAllSpots()
+        )
     }, []);
 
     return (
