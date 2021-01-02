@@ -8,7 +8,7 @@ const OpeningClosed = ({Opening}) =>{
         <div>
             <h3>Booked Sessions</h3>
             <ul>
-                {Opening.map(opening => <li>{`${opening.start} - ${opening.end}`}</li>)}
+                {Opening.map(opening => <li key={opening.id}>{`${opening.start} - ${opening.end}`}</li>)}
             </ul>
 
         </div>

@@ -9,7 +9,7 @@ import {fetchAllSpots} from "../../store/spots"
 const Spot = ({theSpot}) => {
     return (
         <div>
-            <NavLink to={`/spot/${theSpot.id}`}>{theSpot.name}</NavLink>
+            <NavLink to={`/spot/${theSpot.id}`} key={theSpot.id}>{theSpot.name}</NavLink>
         </div>
     )
 };
@@ -31,7 +31,7 @@ const SpotsPage = () =>{
             <h2>Tattoo Shops</h2>
             {!currentSpots && <h3>Loading...</h3>}
             {currentSpots && currentSpots.map(spot => {
-                return <Spot theSpot={spot} />
+                return <Spot theSpot={spot} key={spot.id} />
             })}
         </div>
     )

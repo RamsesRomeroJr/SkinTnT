@@ -8,15 +8,20 @@ const Openings = ({Openings}) =>{
     //map through openings to check userId null or not
     //if null go to OpeningOpen compnent
     //not null go to OpeningClosed
-    // const checking = Openings.map( opening => {
-    //     if(opening.userId === null){
-    //         open.push(opening)
-    //     }
-    //     else if(opening.userId !== null){
-    //         closed.push(opening)
-    //     }
-    // })
-    {console.log(Openings)}
+    if(Openings){
+
+        const checking = Openings.map( opening => {
+            if(opening.userId === null){
+                open.push(opening)
+            }
+            else if(opening.userId !== null){
+                closed.push(opening)
+            }
+        })
+    }
+
+    // {console.log(Openings)}
+
     return (
         <div>
             <div id="Opening-Dropdown">

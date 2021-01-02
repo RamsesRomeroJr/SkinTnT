@@ -17,10 +17,14 @@ const Spot = ({theSpot}) => {
 };
 
 const SpotPage = () =>{
+    useEffect(async() => {
+        dispatch(fetchSpot(id)
+        )
+    }, []);
 
     const {id} = useParams()
-
     const dispatch = useDispatch();
+
     const currentSpot = useSelector(state => {
         return state.spot;
     })
@@ -28,12 +32,9 @@ const SpotPage = () =>{
     const userId = useSelector(state => {
         return state.session.user.id;
     });
+
     const spotId = currentSpot.id
 
-    useEffect(async() => {
-        dispatch(fetchSpot(id)
-        )
-    }, []);
 
 
     return (

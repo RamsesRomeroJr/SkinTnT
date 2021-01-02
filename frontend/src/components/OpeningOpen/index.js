@@ -25,7 +25,7 @@ const OpeningOpen = ({Opening}) =>{
                 >
                     <option value='' disabled>Select Session</option>
                     {Opening.map(opening =>
-                        <option key={currentOpening}>{`${opening.start}-${opening.end}`}</option>)}
+                        <option key={opening.id}>{`from ${new Date(opening.start)} to ${new Date(opening.end)}`}</option>)}
                 </select>
                 <button>Book</button>
             </form>
