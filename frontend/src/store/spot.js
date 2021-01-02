@@ -20,6 +20,11 @@ export const fetchSpot = (id) =>{
     }
 }
 
+export const addBooking = ({userId, openingId, spotId}) => async (dispatch) => {
+    const data = 'this Is A fetch request';
+    //update userId on openings with put
+    dispatch(fetchSpot(spotId))
+  }
 
 const initialState =  [];
 
