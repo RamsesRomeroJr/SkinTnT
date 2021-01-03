@@ -1,17 +1,20 @@
 import {addBooking} from "../../store/spot"
 import { useState } from 'react';
-import {useDispatch } from "react-redux"
+import {useDispatch, useSelector } from "react-redux"
 
 const OpeningOpen = ({Opening}) =>{
     const dispatch = useDispatch();
+    const userId = useSelector((state) => state.session.user).id
 
     const [currentOpening, setOpening] = useState('')
+    const [selectedOpening, setSelectedOpening] = useState('')
 
     //this will be the submit for each opening (aka new Opening component)
     const handleSubmit = (e) => {
         e.preventDefault();
         //                   userId,openingId, spotId
-        dispatch(addBooking({                        }));
+        // dispatch(addBooking({                        }));
+        console.log(selectedOpening)
     }
 
     return (
@@ -20,12 +23,15 @@ const OpeningOpen = ({Opening}) =>{
             <form onSubmit={handleSubmit}>
                 <select
                     name='opening'
-                    onChange={e => setOpening(e.target.value)}
+                    onChange={e => {
+                        setOpening(e.target.value)
+                        setSelectedOpening(e.target)
+                    }}
                     value={currentOpening}
                 >
                     <option value='' disabled>Select Session</option>
                     {Opening.map(opening =>
-                        <option key={opening.id}>{`from ${new Date(opening.start)} to ${new Date(opening.end)}`}</option>)}
+                        <option key={opening.id}>{`${new Date(opening.start)} to ${new Date(opening.end)}`}</option>)}
                 </select>
                 <button>Book</button>
             </form>

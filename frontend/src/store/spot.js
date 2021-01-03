@@ -23,7 +23,36 @@ export const fetchSpot = (id) =>{
 export const addBooking = ({userId, openingId, spotId}) => async (dispatch) => {
     const data = 'this Is A fetch request';
     //update userId on openings with put
+    const res = await fetch('/api/book', {
+      method: 'PUT',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify({
+        userId,
+        openingId,
+        spotId
+      })
+    })
     dispatch(fetchSpot(spotId))
+  }
+
+  export const cancelBooking = ({userId, openingId,spotId}) => async(dispatch) => {
+    const data= 'this is a fetch request'
+
+    const res = await fetch('/api/book/cancel', {
+      method: 'PUT',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify({
+        userId,
+        openingId,
+        spotId
+      })
+    })
+    dispatch(fetchSpot(spotId))
+
   }
 
 const initialState =  [];

@@ -1,7 +1,7 @@
 import {useEffect} from "react"
 import {useParams} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux"
-import {fetchSpot, addBooking} from "../../store/spot"
+import {fetchSpot} from "../../store/spot"
 
 import Openings from '../Openings'
 
