@@ -32,3 +32,13 @@
     margin: 0;
     padding: 0;
 }
+
+#spots-link{
+    text-decoration: none;
+    color: white;
+    font-size: 70px;
+
+}
+#spots-link:hover{
+    color: #ec4c4c;
+}

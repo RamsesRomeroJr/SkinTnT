@@ -1,3 +1,4 @@
+import './index.css'
 import {fetch} from "../../store/csrf"
 import {useEffect, useState} from "react"
 import {NavLink} from "react-router-dom"
@@ -8,7 +9,7 @@ import {fetchAllSpots} from "../../store/spots"
 
 const Spot = ({theSpot}) => {
     return (
-        <div>
+        <div id='spot-link'>
             <NavLink to={`/spot/${theSpot.id}`} key={theSpot.id}>{theSpot.name}</NavLink>
         </div>
     )
