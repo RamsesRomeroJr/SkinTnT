@@ -26,7 +26,7 @@ function Navigation({ isLoaded }){
   return (
     <ul id="top-nav-bar">
       <li>
-        <NavLink to='/'>
+        <NavLink to='/spots'>
         <img src={logo} id="nav-bar-logo" />
         </NavLink>
       </li>
