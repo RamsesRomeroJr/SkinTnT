@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     latitude: DataTypes.DECIMAL,
     street: DataTypes.STRING,
     state: DataTypes.STRING,
-    zipcode: DataTypes.INTEGER
+    zipcode: DataTypes.INTEGER,
+    url: DataTypes.STRING
   }, {});
   Spot.associate = function(models) {
     Spot.hasMany(models.Opening, {foreignKey:'spotId'})
