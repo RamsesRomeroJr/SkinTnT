@@ -12,7 +12,7 @@ const RatingCreate = () =>{
     const [review, setReview] = useState('')
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         dispatch(addRating({userId, spotId, rating, review}))
         // dispatch(fetchSpot(spotId))
         // console.log(spotId, userId, rating, review)

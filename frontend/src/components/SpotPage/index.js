@@ -5,6 +5,7 @@ import {fetchSpot} from "../../store/spot"
 
 import Openings from '../Openings'
 import RatingCreate from '../RatingCreate'
+import Ratings from '../Ratings'
 
 const Spot = ({theSpot}) => {
     return (
@@ -30,11 +31,7 @@ const SpotPage = () =>{
         return state.spot;
     })
 
-    const userId = useSelector(state => {
-        return state.session.user.id;
-    });
-
-    const spotId = currentSpot.id
+    const ratings = useSelector((state) => state.spot.Ratings);
 
 
 
@@ -51,6 +48,9 @@ const SpotPage = () =>{
         </div>
         <div id="rating-create">
             <RatingCreate />
+        </div>
+        <div id='ratings'>
+            <Ratings Ratings={ratings}/>
         </div>
         </div>
     )

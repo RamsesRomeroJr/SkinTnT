@@ -10,7 +10,6 @@ const OpeningClosed = ({Opening}) =>{
     const spotId = useSelector((state) => state.spot).id
 
     const [selectedOpening, setSelectedOpening] = useState('')
-
     // check openings to see if it matches current user to display "cancel" button
     //to cancel session
     const handleSubmit = async (e) => {
@@ -23,6 +22,7 @@ const OpeningClosed = ({Opening}) =>{
         <div>
             <form onSubmit={handleSubmit}>
             <h3>Booked Sessions</h3>
+            {!Opening.length && <h4 style={{color: "salmon"}}>-no current bookings-</h4>}
                 <ul>
                     {Opening.map(opening =>{
                     if(userId === opening.userId){
