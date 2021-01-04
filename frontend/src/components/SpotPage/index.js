@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux"
 import {fetchSpot} from "../../store/spot"
 
 import Openings from '../Openings'
+import RatingCreate from '../RatingCreate'
 
 const Spot = ({theSpot}) => {
     return (
@@ -47,6 +48,9 @@ const SpotPage = () =>{
         </div>
         <div id="spot-openings">
             <Openings Openings={currentSpot.Openings}/>
+        </div>
+        <div id="rating-create">
+            <RatingCreate />
         </div>
         </div>
     )

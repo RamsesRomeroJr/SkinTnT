@@ -11,8 +11,8 @@ const OpeningOpen = ({Opening}) =>{
     const [selectedOpening, setSelectedOpening] = useState('')
 
     //this will be the submit for each opening (aka new Opening component)
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = async (e) => {
+        // e.preventDefault();
         //                   userId,openingId, spotId
         dispatch(addBooking({openingId: selectedOpening, userId, spotId}));
         dispatch(fetchSpot(spotId))

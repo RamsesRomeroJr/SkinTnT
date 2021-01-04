@@ -24,7 +24,7 @@ export const addBooking = ({userId, openingId, spotId}) => async (dispatch) => {
 
     //update userId on openings with put
     const res = await fetch('/api/spot/book', {
-      method: 'put',
+      method: 'POST',
       headers: {
         'Content-Type' : 'application/json'
       },
@@ -38,10 +38,9 @@ export const addBooking = ({userId, openingId, spotId}) => async (dispatch) => {
   }
 
   export const cancelBooking = ({userId, openingId,spotId}) => async(dispatch) => {
-    const data= 'this is a fetch request'
 
     const res = await fetch('/api/spot/book/cancel', {
-      method: 'PUT',
+      method: 'POST',
       headers: {
         'Content-Type' : 'application/json'
       },
@@ -53,6 +52,21 @@ export const addBooking = ({userId, openingId, spotId}) => async (dispatch) => {
     })
     // dispatch(fetchSpot(spotId))
 
+  }
+
+  export const addRating = ({userId, spotId, rating, review}) => async(dispatch) => {
+    const res = await fetch('/api/spot/rating', {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify({
+        userId,
+        spotId,
+        rating,
+        review
+      })
+    })
   }
 
 const initialState =  [];

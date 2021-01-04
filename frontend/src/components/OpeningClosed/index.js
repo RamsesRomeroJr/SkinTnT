@@ -13,16 +13,16 @@ const OpeningClosed = ({Opening}) =>{
 
     // check openings to see if it matches current user to display "cancel" button
     //to cancel session
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = async (e) => {
+        // e.preventDefault();
 
         dispatch(cancelBooking({openingId: selectedOpening, userId, spotId}))
         dispatch(fetchSpot(spotId))
     }
     return (
         <div>
-            <h3>Booked Sessions</h3>
             <form onSubmit={handleSubmit}>
+            <h3>Booked Sessions</h3>
                 <ul>
                     {Opening.map(opening =>{
                     if(userId === opening.userId){

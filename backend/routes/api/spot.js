@@ -24,16 +24,16 @@ router.get('/:spotId', asyncHandler(async (req, res) =>{
 }));
 
 //api to book opening with userId, spotId, openingId by updating the userId column on a specific opening
-router.put('/book', asyncHandler(async (req, res) => {
-    Opening.update(
+router.post('/book', asyncHandler(async (req, res) => {
+    await Opening.update(
         {userId: req.body.userId},
         {where: {id: req.body.openingId, spotId: req.body.spotId}}
     )
 }));
 
 //api to cancel opening by turning userId on opening back to null
-router.put('/book/cancel', asyncHandler(async (req, res) => {
-    Opening.update(
+router.post('/book/cancel', asyncHandler(async (req, res) => {
+    await Opening.update(
         {userId: null},
         {where: {id: req.body.openingId, spotId: req.body.spotId}}
     )
@@ -43,13 +43,16 @@ router.put('/book/cancel', asyncHandler(async (req, res) => {
 //api to edit rating (updating columns)
 
 //api to create rating
-router.post('/rating',requireAuth, asyncHandler(async (req,res) => {
-    const {userId,
-           spotId,
-           review,
-           rating} = req.body
+router.post('/rating',requireAuth, asyncHandler(async (req, res) => {
+    const {spotId,
+           userId,
+           rating,
+           review} = req.body
     // check if req.user.id matches userId and other validations
     //for rating (max 5) and review length
+    await Rating.create(
+        {userId, spotId, review, rating}
+    )
 }))
 
 module.exports = router;
