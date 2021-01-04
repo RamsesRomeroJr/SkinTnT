@@ -12,6 +12,7 @@
   justify-content: space-between;
   list-style-type: none;
   box-shadow: 0 4px 2px -2px #8b8c8f;
+  padding-right: 100px;
 }
 
 #nav-buttons{
