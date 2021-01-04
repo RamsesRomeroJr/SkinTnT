@@ -53,11 +53,11 @@ SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=N
  * Bookings
   * Users can book a session with at their favorite tattoo shops
 
-* Spot Search
-  * Users can search for tattoo shops by location or name
+* Cancel Bookings
+  * Users can cancel there own booked sessions
 
 * Reviews
-  * After a users session they can leave a rating and a review of their experience
+  * Users can leave a rating and review on a shop
 
 ---
 
