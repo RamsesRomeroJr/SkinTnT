@@ -17,12 +17,12 @@ const Spot = ({theSpot}) => {
 };
 
 const SpotPage = () =>{
+    const {id} = useParams()
     useEffect(async() => {
         dispatch(fetchSpot(id)
         )
     }, []);
 
-    const {id} = useParams()
     const dispatch = useDispatch();
 
     const currentSpot = useSelector(state => {

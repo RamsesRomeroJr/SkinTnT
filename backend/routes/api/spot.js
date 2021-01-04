@@ -25,12 +25,18 @@ router.get('/:spotId', asyncHandler(async (req, res) =>{
 
 //api to book opening with userId, spotId, openingId by updating the userId column on a specific opening
 router.put('/book', asyncHandler(async (req, res) => {
-
+    Opening.update(
+        {userId: req.body.userId},
+        {where: {id: req.body.openingId, spotId: req.body.spotId}}
+    )
 }));
 
 //api to cancel opening by turning userId on opening back to null
 router.put('/book/cancel', asyncHandler(async (req, res) => {
-
+    Opening.update(
+        {userId: null},
+        {where: {id: req.body.openingId, spotId: req.body.spotId}}
+    )
 }));
 
 
