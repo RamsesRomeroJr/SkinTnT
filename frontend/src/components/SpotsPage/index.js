@@ -1,5 +1,4 @@
 import './index.css'
-import {fetch} from "../../store/csrf"
 import {useEffect, useState} from "react"
 import {NavLink} from "react-router-dom"
 
@@ -11,6 +10,7 @@ const Spot = ({theSpot}) => {
     return (
         <div id='spot-link'>
             <NavLink to={`/spot/${theSpot.id}`} key={theSpot.id}>{theSpot.name}</NavLink>
+            <img src='https://lh3.ggpht.com/p/AF1QipPWFW40qGnLdebEGPeaZ9lB5pkDZYRrSmwU30RF=s512' id='tattoo-shop-img'/>
         </div>
     )
 };

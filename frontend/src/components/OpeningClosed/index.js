@@ -1,3 +1,5 @@
+import './index.css'
+
 import {useSelector, useDispatch} from 'react-redux'
 import { useState, useEffect } from 'react';
 import {cancelBooking, fetchSpot} from "../../store/spot"
@@ -28,8 +30,8 @@ const OpeningClosed = ({Opening}) =>{
                     if(userId === opening.userId){
                         return(
                         <div key={`div for ${opening.id}`}>
-                        <li key={opening.id}>{`${new Date(opening.start)} - ${new Date(opening.end)}`}</li>
-                        <button  onClick={() => setSelectedOpening(opening.id)}>cancel</button>
+                        <li key={opening.id} id='booked' >{`${new Date(opening.start)} - ${new Date(opening.end)}`}</li>
+                        <button  onClick={() => setSelectedOpening(opening.id)} id='cancel-button'>cancel</button>
                         </div>
                         )
                     }

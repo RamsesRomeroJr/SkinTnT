@@ -1,0 +1,28 @@
+#spot-openings{
+    border: 3px solid lightgrey;
+    border-radius: 10px;
+    margin: 4px;
+    padding-left: 2%;
+}
+#rating-create{
+    border: 3px solid lightgrey;
+    border-radius: 10px;
+    margin: 4px;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+#ratings {
+    border: 3px solid lightgrey;
+    border-radius: 10px;
+    margin: 4px;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+#spot-page{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#shop-img{
+    border-radius: 10px;
+}

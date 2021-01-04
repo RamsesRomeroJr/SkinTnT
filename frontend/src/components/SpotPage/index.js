@@ -1,3 +1,5 @@
+import './index.css'
+
 import {useEffect} from "react"
 import {useParams} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux"
@@ -9,11 +11,10 @@ import Ratings from '../Ratings'
 
 const Spot = ({theSpot}) => {
     return (
-        <div>
-            {/* {console.log(theSpot.Openings)} */}
+        <div id='spot-info'>
             <h1>{theSpot.name}</h1>
             <h4>{`${theSpot.street} ${theSpot.state} ${theSpot.zipcode}`}</h4>
-            {/* <h1>{theSpot.id}</h1> */}
+            <img src='https://lh3.ggpht.com/p/AF1QipPWFW40qGnLdebEGPeaZ9lB5pkDZYRrSmwU30RF=s512' id='shop-img'/>
         </div>
     )
 };

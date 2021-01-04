@@ -1,3 +1,5 @@
+import './index.css'
+
 import {useSelector, useDispatch} from 'react-redux'
 import { useState, useEffect } from 'react';
 import { addRating, fetchSpot} from "../../store/spot"
@@ -41,7 +43,7 @@ const RatingCreate = () =>{
                         value={review}
                     />
                 </div>
-                    <button>Sumbit</button>
+                    <button id='submit-button'>Submit</button>
             </form>
         </div>
     )

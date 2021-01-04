@@ -3,8 +3,12 @@
     border: 4px solid lightgrey;
     border-radius: 6px;
     margin:1% 4%;
-    height: 100px;
+    height: 300px;
     width: 25%;
     white-space: normal;
 
+}
+#tattoo-shop-img{
+    width: auto;
+    height: 90%;
 }

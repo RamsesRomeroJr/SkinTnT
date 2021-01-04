@@ -1,3 +1,5 @@
+import './index.css'
+
 import { addBooking, fetchSpot } from "../../store/spot"
 import { useState } from 'react';
 import {useDispatch, useSelector } from "react-redux"
@@ -34,7 +36,7 @@ const OpeningOpen = ({Opening}) =>{
                     {Opening.map(opening =>
                         <option key={opening.id} value={opening.id}>{`${new Date(opening.start)} to ${new Date(opening.end)}`}</option>)}
                 </select>
-                <button>Book</button>
+                <button id='book-button' >Book</button>
             </form>
 
         </div>
