@@ -72,10 +72,10 @@ export const addBooking = ({userId, openingId, spotId}) => async (dispatch) => {
 const initialState =  [];
 
 function reducer(state = initialState, action) {
-  let newState;
+
   switch (action.type) {
     case SET_SPOT:
-      newState = action.spot
+     const newState = action.spot
       return newState;
     default:
       return state;
