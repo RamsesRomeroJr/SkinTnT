@@ -1,7 +1,41 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+import styled from 'styled-components'
 import "./LoginForm.css";
+
+const LoginButton = styled.button`
+  width:75px;
+  margin-bottom:4px;
+  margin-top:4px;
+  background-color:#FCFAF0;
+  border:solid 0.5px lightgrey;
+  color:grey;
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.6);
+  outline:none;
+  &:hover{
+    border:solid 0.5px lightgrey;
+    box-shadow: 0 3px 9px 0px rgba(0,128,0,0.6);
+    color:green;
+    font-weight:600;
+  }
+`;
+
+const Input = styled.input`
+  margin-top:10px;
+  margin-bottom:10px;
+  background-color:#FCFAF0;
+  color:grey;
+  padding: 8px 0 8px 8px;
+  border:solid 0.5px lightgrey;
+`
+
+const LoginTitle = styled.h1`
+  color: grey;
+  margin: 0;
+  font-family: 'Staatliches', cursive;
+  font-weight:3;
+`
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -21,7 +55,7 @@ function LoginForm() {
 
   return (
     <>
-      <h1>Log In</h1>
+      <LoginTitle>Log In</LoginTitle>
       <form onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (
@@ -30,7 +64,7 @@ function LoginForm() {
         </ul>
         <label>
           Username or Email
-          <input
+          <Input
             type="text"
             value={credential}
             onChange={(e) => setCredential(e.target.value)}
@@ -39,14 +73,18 @@ function LoginForm() {
         </label>
         <label>
           Password
-          <input
+          <Input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <LoginButton type="submit">Log In</LoginButton>
+        <LoginButton type="submit" onClick={(e) =>{
+          setCredential('demo@user.io')
+          setPassword('password')
+        }}>Demo</LoginButton>
       </form>
     </>
   );
