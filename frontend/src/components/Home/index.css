@@ -1,41 +1,7 @@
-#home-page-container{
-    height: 100%;
-    /* background-color: purple; */
-    position: relative;
-    overflow: hidden;
-}
-
-#home-page-container img{
-    width: 100%;
-}
-
-#home-page-overlay{
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: flex-start; */
-}
-
-#home-body{
-    margin-top: 100px;
-    margin-left: 50px;
-}
-
-#home-page-overlay h1{
-    color: white;
-    font-size: 70px;
-    margin: 0;
-    padding: 0;
-}
 
 #spots-link{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 70px;
 
 }
