@@ -8,15 +8,14 @@ const LoginButton = styled.button`
   width:75px;
   margin-bottom:4px;
   margin-top:4px;
-  background-color:#FCFAF0;
   border:solid 0.5px lightgrey;
   color:grey;
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.6);
   outline:none;
   &:hover{
+    color:#EE6262;
     border:solid 0.5px lightgrey;
-    box-shadow: 0 3px 9px 0px rgba(0,128,0,0.6);
-    color:green;
+    box-shadow: 0 3px 9px 0px rgba(238,98,98,0.6);
     font-weight:600;
   }
 `;
@@ -24,7 +23,6 @@ const LoginButton = styled.button`
 const Input = styled.input`
   margin-top:10px;
   margin-bottom:10px;
-  background-color:#FCFAF0;
   color:grey;
   padding: 8px 0 8px 8px;
   border:solid 0.5px lightgrey;
@@ -55,27 +53,27 @@ function LoginForm() {
 
   return (
     <>
+      <form onSubmit={handleSubmit} className='formModal'>
       <LoginTitle>Log In</LoginTitle>
-      <form onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}
         </ul>
         <label>
-          Username or Email
           <Input
             type="text"
             value={credential}
+            placeholder='Username or Email'
             onChange={(e) => setCredential(e.target.value)}
             required
           />
         </label>
         <label>
-          Password
           <Input
             type="password"
             value={password}
+            placeholder='password'
             onChange={(e) => setPassword(e.target.value)}
             required
           />
