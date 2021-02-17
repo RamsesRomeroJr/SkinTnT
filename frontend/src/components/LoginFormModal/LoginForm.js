@@ -3,6 +3,7 @@ import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import styled from 'styled-components'
 import "./LoginForm.css";
+import { NavLink } from 'react-router-dom';
 
 const LoginButton = styled.button`
   width:75px;
