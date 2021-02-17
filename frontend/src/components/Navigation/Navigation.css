@@ -1,6 +1,14 @@
 .profile-dropdown {
   position: absolute;
-  margin-top: 25px;
+  list-style-type: none;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #EE6262;
+  padding: 10px;
+  margin-top: 30px;
+  font-family: 'Staatliches', cursive;
+  font-weight:3;
+  color: grey;
 }
 
 #top-nav-bar{
