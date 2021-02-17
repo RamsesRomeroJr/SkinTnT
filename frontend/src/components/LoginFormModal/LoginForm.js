@@ -3,7 +3,7 @@ import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import styled from 'styled-components'
 import "./LoginForm.css";
-import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const LoginButton = styled.button`
   width:75px;
@@ -36,11 +36,25 @@ const LoginTitle = styled.h1`
   font-weight:3;
 `
 
+const SignUpButtone = styled.h3`
+  color: grey;
+  margin-bottom:4px;
+  margin-top:4px;
+  font-size:15px;
+  text-decoration: underline;
+  cursor: default;
+  &:hover{
+    color:red;
+  }
+`
+
 function LoginForm() {
   const dispatch = useDispatch();
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+
+  const history = useHistory()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -84,6 +98,7 @@ function LoginForm() {
           setCredential('demo@user.io')
           setPassword('password')
         }}>Demo</LoginButton>
+        <SignUpButtone type="button" onClick={(e)=>{history.push('/')}}>Sign Up</SignUpButtone>
       </form>
     </>
   );
