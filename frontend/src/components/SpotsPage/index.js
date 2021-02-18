@@ -1,6 +1,6 @@
 import './index.css'
 import {useEffect, useState} from "react"
-import {NavLink} from "react-router-dom"
+import {NavLink, useHistory} from "react-router-dom"
 import Spot from './spot.js'
 import {useDispatch, useSelector} from "react-redux"
 import {fetchAllSpots} from "../../store/spots"
@@ -32,7 +32,7 @@ const ContainerTitle = styled.h2`
 
 
 const SpotsPage = () =>{
-
+    const history = useHistory()
     const dispatch = useDispatch();
     const currentSpots = useSelector(state => {
         return state.spots;
@@ -51,7 +51,7 @@ const SpotsPage = () =>{
             <SpotsContainer>
                 {!currentSpots && <h3>Loading...</h3>}
                 {currentSpots && currentSpots.map(spot => {
-                    return <Spot theSpot={spot} key={spot.id} />
+                    return <Spot theSpot={spot} key={spot.id}/>
                 })}
             </SpotsContainer>
         </div>
