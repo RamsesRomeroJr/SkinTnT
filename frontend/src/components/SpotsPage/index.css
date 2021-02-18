@@ -1,14 +1,5 @@
-#spot-link{
-    display: inline-block;
-    border: 4px solid lightgrey;
-    border-radius: 6px;
-    margin:1% 4%;
-    height: 300px;
-    width: 25%;
-    white-space: normal;
-
-}
-#tattoo-shop-img{
-    width: 100%;
-    height: 90%;
+.spot-title{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
 }
