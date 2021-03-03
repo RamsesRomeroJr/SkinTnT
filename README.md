@@ -5,6 +5,8 @@
     <img src="./frontend/public/final-skinTnT.png" alt="Logo" width="80" height="80">
   </a>
   </p>
+  
+  [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
  <h3 align="center">SkinTnT</h3>
@@ -44,20 +46,21 @@ SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=N
 ---
 
 ### Features
-* Register
-  * Available on the nav bar
-
-* Login
+* Login/Demo Login
   * A function integrated into our homepage that allows the user to login through our login modal, to not disrupt their current experience
+<img src="https://github.com/RamsesRomeroJr/SkinTnT/blob/ReadMe/frontend/public/SkintTnT-DemoLogin.gif?raw=true" />
 
  * Bookings
   * Users can book a session with at their favorite tattoo shops
+ <img src="https://github.com/RamsesRomeroJr/SkinTnT/blob/ReadMe/frontend/public/SkinTnT-zBookSession.gif?raw=true" />
 
 * Cancel Bookings
   * Users can cancel there own booked sessions
+ <img src="https://github.com/RamsesRomeroJr/SkinTnT/blob/ReadMe/frontend/public/SkinTnT-CancelSession.gif?raw=true" />
 
-* Reviews
+* Ratings/Reviews
   * Users can leave a rating and review on a shop
+<img src="https://github.com/RamsesRomeroJr/SkinTnT/blob/ReadMe/frontend/public/SkinTnT-Rating-Review.gif?raw=true" />
 
 ---
 
@@ -71,3 +74,6 @@ SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=N
 - Ramses Romero - ramses.romero.jr@gmail.com
 - [linkedIn]()
 - [Project Link]()
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/ramses-romero-jr/
