@@ -50,7 +50,7 @@ SkintTnT is a clone of [AirBnB](https://www.airbnb.com/s/homes?location_search=N
   * A function integrated into our homepage that allows the user to login through our login modal, to not disrupt their current experience
 <img src="https://github.com/RamsesRomeroJr/SkinTnT/blob/ReadMe/frontend/public/SkintTnT-DemoLogin.gif?raw=true" />
 
- * Bookings
+* Bookings
   * Users can book a session with at their favorite tattoo shops
  <img src="https://github.com/RamsesRomeroJr/SkinTnT/blob/ReadMe/frontend/public/SkinTnT-zBookSession.gif?raw=true" />
 
