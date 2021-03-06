@@ -6,7 +6,11 @@ import {useDispatch, useSelector } from "react-redux"
 
 const OpeningOpen = ({Opening}) =>{
     const dispatch = useDispatch();
-    const userId = useSelector((state) => state.session.user).id
+    const user = useSelector((state) => state.session.user)
+    let userId;
+    if(user){
+        userId = user.id
+    }
     const spotId = useSelector((state) => state.spot).id
 
     const [currentOpening, setOpening] = useState('')
