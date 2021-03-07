@@ -11,7 +11,7 @@ const SignUpFormDiv = styled.div`
 const Page = styled.div`
   display:flex;
   /* align-items:center; */
-  justify-content:space-between;
+  justify-content:space-around;
 `
 const TagLine = styled.div`
     margin-left:100px;
