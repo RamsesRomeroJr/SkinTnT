@@ -8,7 +8,11 @@ import {cancelBooking, fetchSpot} from "../../store/spot"
 const OpeningClosed = ({Opening}) =>{
     const dispatch = useDispatch();
 
-    const userId = useSelector((state) => state.session.user).id;
+    const user = useSelector((state) => state.session.user)
+    let userId;
+    if(user){
+        userId = user.id
+    }
     const spotId = useSelector((state) => state.spot).id
 
     const [selectedOpening, setSelectedOpening] = useState('')

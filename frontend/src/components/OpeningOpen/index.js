@@ -3,8 +3,10 @@ import './index.css'
 import { addBooking, fetchSpot } from "../../store/spot"
 import { useState } from 'react';
 import {useDispatch, useSelector } from "react-redux"
+import { useHistory } from "react-router-dom";
 
 const OpeningOpen = ({Opening}) =>{
+    const history = useHistory();
     const dispatch = useDispatch();
     const user = useSelector((state) => state.session.user)
     let userId;
@@ -18,10 +20,16 @@ const OpeningOpen = ({Opening}) =>{
 
     //this will be the submit for each opening (aka new Opening component)
     const handleSubmit = async (e) => {
-        // e.preventDefault();
-        //                   userId,openingId, spotId
-        dispatch(addBooking({openingId: selectedOpening, userId, spotId}));
-        dispatch(fetchSpot(spotId))
+
+        if(user===undefined){
+            // e.preventDefault();
+            history.push('/')
+        }
+        else{
+            //                   userId,openingId, spotId
+            dispatch(addBooking({openingId: selectedOpening, userId, spotId}));
+            dispatch(fetchSpot(spotId))
+        }
     }
 
     return (
