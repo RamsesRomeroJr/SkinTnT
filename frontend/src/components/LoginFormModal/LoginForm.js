@@ -36,17 +36,6 @@ const LoginTitle = styled.h1`
   font-weight:3;
 `
 
-const SignUpButtone = styled.h3`
-  color: grey;
-  margin-bottom:4px;
-  margin-top:4px;
-  font-size:15px;
-  text-decoration: underline;
-  cursor: default;
-  &:hover{
-    color:red;
-  }
-`
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -98,7 +87,6 @@ function LoginForm() {
           setCredential('demo@user.io')
           setPassword('password')
         }}>Demo</LoginButton>
-        <SignUpButtone type="button" onClick={(e)=>{history.push('/')}}>Sign Up</SignUpButtone>
       </form>
     </>
   );
