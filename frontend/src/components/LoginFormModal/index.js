@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
 import LoginForm from './LoginForm';
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom';
 
 const LoginButton = styled.button`
   width:75px;
@@ -22,8 +23,33 @@ const LoginButton = styled.button`
   }
 `;
 
+const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin-bottom: 5px;
+  background-color: white;
+  border: 0px solid lightgrey;
+`
+
+
+const SignUpButtone = styled.h3`
+  color: grey;
+  margin-bottom:4px;
+  margin-top:4px;
+  font-size:15px;
+  text-decoration: underline;
+  cursor: default;
+  /* align-self:center; */
+  &:hover{
+    color:red;
+  }
+`
+
 function LoginFormModal() {
   const [showModal, setShowModal] = useState(false);
+  const history = useHistory()
 
   return (
     <>
@@ -31,6 +57,9 @@ function LoginFormModal() {
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <LoginForm />
+          <Form>
+            <SignUpButtone type="button" onClick={(e)=>{history.push('/'); setShowModal(false)}}>Sign Up</SignUpButtone>
+          </Form>
         </Modal>
       )}
     </>
